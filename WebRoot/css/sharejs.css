@@ -1,0 +1,25 @@
+BODY {
+	FONT-FAMILY: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 14px; PADDING-TOP: 0px
+}
+* A {POSITION: relative}
+
+A:hover {COLOR: #333; TEXT-DECORATION:underline;}
+A:active {COLOR: #333; TEXT-DECORATION: none;OUTLINE-STYLE: none}
+
+
+A IMG {	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none; margin-left:4PX;}
+#featureContainer {	BORDER-BOTTOM: #999 0px dotted; BORDER-LEFT: #999 0px dotted; MARGIN: 20px auto 0px; WIDTH: 600px; FONT-SIZE: 80%; BORDER-TOP: #999 0px dotted; BORDER-RIGHT: #999 0px dotted;}
+#wrap {	OVERFLOW: hidden;}
+#feature {	BORDER-BOTTOM: #999 0px dotted; POSITION: relative; BORDER-LEFT: #999 0px dotted; MARGIN-TOP: 5px; MARGIN-BOTTOM: 20px; BORDER-TOP: #999 0px dotted; BORDER-RIGHT: #999 0px dotted;}
+#feature .button {	BORDER-BOTTOM: #999 0px dotted; POSITION: absolute; BORDER-LEFT: #999 0px dotted; WIDTH: 840px; BORDER-TOP: #999 0px dotted; TOP: 72px; BORDER-RIGHT: #999 0px dotted; LEFT: 0px;}
+#feature .prev { TEXT-INDENT: -9999px; WIDTH: 54px; DISPLAY: block; BACKGROUND:url(../images/l_btn.jpg) center top; FLOAT: left; HEIGHT: 54px; TOP: -125px;}
+#feature .next {TEXT-INDENT: -9999px; WIDTH: 54px; DISPLAY: block; BACKGROUND: url(../images/r_btn.jpg) center top; FLOAT: right; HEIGHT: 54px; TOP: -125px;}
+#feature .prev:hover {BACKGROUND-POSITION: center bottom;}
+#feature .next:hover {BACKGROUND-POSITION: center bottom;}
+.featureUL { POSITION: relative; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 2800px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px; LEFT: 0px;}
+.featureBox {BACKGROUND-IMAGE:url(../images/img_bg.jpg); WIDTH: 160px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; HEIGHT: 160px; OVERFLOW: hidden; PADDING-TOP: 6px; PADDING-left: 2px;}
+#botton-scroll {Z-INDEX: 0; MARGIN: 0px auto; WIDTH: 840px; FLOAT: left; HEIGHT: 200px;}
+#block {Z-INDEX: 0; POSITION: relative; MARGIN: 0px auto; PADDING-LEFT: 0px; WIDTH: 450px; HEIGHT: 180px; FONT-SIZE: 70%; OVERFLOW: hidden; }
+#block .box {WIDTH: 144px; FLOAT: left; HEIGHT: 144px; border:none; background:none; }
+#block .box .feature-title {FONT-SIZE: 140%; FONT-WEIGHT: normal;}
+#block .box .feature-thumb {WIDTH: 240px; MARGIN-BOTTOM: 5px; FLOAT: left; HEIGHT: 150px;}

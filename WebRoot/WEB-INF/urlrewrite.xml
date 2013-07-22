@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<urlrewrite>
+		<rule>
+			<from>/index/(.*)</from>
+			<to>/userInfoAction_aa.do?id=$1</to>
+		</rule>
+		<rule>
+			<from>^/cir/(.*).html$</from>
+			<to>/circleDetail_circle.do?id=$1</to>
+		</rule>
+		<rule>
+			<from>^/cir2/(.*)/(.*).html$</from>
+			<to>/circleDetail2_circle.do?id=$2&amp;pageNum=$1&amp;pageSize=10</to>
+		</rule>
+		<rule>
+			<from>^/circletalk/(.*).html$</from>
+			<to>/circleDetails_circletalkmore.do?id=$1</to>
+		</rule>
+		<rule>
+			<from>^/talkdetail/(.*)/(.*).html$</from>
+			<to>/circleDetails_talkdetail.do?id=$1&amp;pid=$2</to>
+		</rule>
+		<rule>
+			<from>^/cirtag/(.*)/(.*)/(.*).html$</from>
+			<to>/circleDetails_circletag.do?id=$2&amp;pageNum=$1&amp;pid=$3&amp;pageSize=10</to>
+		</rule>
+		<rule>
+			<from>^/cir_user/(.*).html$</from>
+			<to type="forward">/circleDetail_circle_user.do?id=$1</to>
+		</rule>
+		<rule>
+			<from>^/det/(.*)/(.*).html$</from>
+			<to type="forward">/circleDetails_getDetail.do?id=$1&amp;pid=$2</to>
+		</rule>
+		<rule>
+            <from>^/feiwenshowone/(.*)/(.*)/(.*).html$</from>
+            <to>/feiWenAction_showone.do?tid=$1&amp;pageNum=$2&amp;fid=$3</to>
+        </rule>
+		<rule>
+            <from>/circle/(.*)</from>
+            <to>/quanzi/circle.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/circle_user/(.*)</from>
+            <to>/quanzi/circle_user.jsp?id=$1</to>
+        </rule>
+		<rule>
+            <from>/details/(.*)</from>
+            <to>/quanzi/details.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/votes/(.*)</from>
+            <to>/vote/vote.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/vote.html</from>
+            <to>/vote/main.jsp</to>
+        </rule>
+        
+        <rule>
+            <from>/user/(.*)</from>
+            <to>/newuser/user_me.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/usercontent/(.*)</from>
+            <to>/newuser/usermore.jsp?id=$1</to>
+        </rule>
+        
+        
+        
+         <rule>
+            <from>/type/(.*).html</from>
+            <to>/quanzi/morecircle.jsp?id=$1</to>
+        </rule>
+<!--        <rule>-->
+<!--            <from>/type/(.*)/(.*).html</from>-->
+<!--            <to>/quanzi/type.jsp?hot=$1&amp;type=$2</to>-->
+<!--        </rule>-->
+        
+        <rule>
+            <from>/usercontent_me/(.*)</from>
+            <to>/newuser/usermore_me.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/usercenter/(.*)</from>
+            <to>/newuser/usercenter.jsp?id=$1</to>
+        </rule>
+        
+        <rule>
+            <from>/usercenter_me/(.*)</from>
+            <to>/newuser/usercenter_me.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/user_circle/(.*)</from>
+            <to>/profit/user_circle.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/user_mycircle/(.*)</from>
+            <to>/profit/user_mycircle.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/user_vote/(.*)</from>
+            <to>/profit/user_vote.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/topic.html</from>
+            <to>/quanzi/newTopics.jsp</to>
+        </rule>
+         <rule>
+            <from>/topic_tu/(.*)</from>
+            <to>/quanzi/topic_tu.jsp?id=$1</to>
+        </rule>
+         <rule>
+            <from>/topic_pk/(.*)</from>
+            <to>/quanzi/topic_pk.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/feiwenshow/(.*)</from>
+            <to>/feiwen/feiwenshow.jsp?id=$1</to>
+        </rule>
+        <rule>
+            <from>/register.html</from>
+            <to>/setting/register.jsp</to>
+        </rule>
+        <rule>
+            <from>/registerinfo.html</from>
+            <to>/setting/wanshanziliao.jsp</to>
+        </rule>
+        <rule>
+            <from>/join.html</from>
+            <to>/setting/join.jsp</to>
+        </rule>
+        <rule>
+            <from>/uploadphoto.html</from>
+            <to>/setting/uploadphoto.jsp</to>
+        </rule>
+        <rule>
+            <from>/tencentOrSinaResult.html</from>
+            <to>/setting/account.jsp</to>
+        </rule>
+       	<rule>
+			<from>^/changuserinfo/(.*).html$</from>
+			<to>/userInfoAction_changuserinfo.do?id=$1</to>
+		</rule>
+    <outbound-rule>
+        <note>
+            The outbound-rule specifies that when response.encodeURL is called (if you are using JSTL c:url)
+            the url /rewrite-status will be rewritten to /test/status/.
+
+            The above rule and this outbound-rule means that end users should never see the
+            url /rewrite-status only /test/status/ both in thier location bar and in hyperlinks
+            in your pages.
+        </note>
+        <from>/rewrite-status</from>
+        <to>/test/status/</to>
+    </outbound-rule>
+
+
+    <!--
+
+    INSTALLATION
+
+        in your web.xml add...
+
+        <filter>
+            <filter-name>UrlRewriteFilter</filter-name>
+            <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+            <init-param>
+                <param-name>logLevel</param-name>
+                <param-value>WARN</param-value>
+            </init-param>
+        </filter>
+        <filter-mapping>
+            <filter-name>UrlRewriteFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>
+
+     EXAMPLES
+
+     Redirect one url
+        <rule>
+            <from>/some/old/page.html</from>
+            <to type="redirect">/very/new/page.html</to>
+        </rule>
+
+    Redirect a directory
+        <rule>
+            <from>/some/olddir/(.*)</from>
+            <to type="redirect">/very/newdir/$1</to>
+        </rule>
+
+    Clean a url
+        <rule>
+            <from>/products/([0-9]+)</from>
+            <to>/products/index.jsp?product_id=$1</to>
+        </rule>
+    eg, /products/1234 will be passed on to /products/index.jsp?product_id=1234 without the user noticing.
+
+    Browser detection
+        <rule>
+            <condition name="user-agent">Mozilla/[1-4]</condition>
+            <from>/some/page.html</from>
+            <to>/some/page-for-old-browsers.html</to>
+        </rule>
+    eg, will pass the request for /some/page.html on to /some/page-for-old-browsers.html only for older
+    browsers whose user agent srtings match Mozilla/1, Mozilla/2, Mozilla/3 or Mozilla/4.
+
+    -->
+
+</urlrewrite>
+

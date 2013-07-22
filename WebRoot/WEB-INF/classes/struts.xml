@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.custom.i18n.resources" value="config/resource/messageResource" />
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"></constant>
+	<constant name="struts.multipart.maxSize" value="9000000" />
+	<constant name="struts.action.extension" value="do" />
+	<constant name="struts.devsMode" value="true" />
+	<package name="check-permission" extends="struts-default">
+		<interceptors>
+			<interceptor name="authority"
+				class="com.yizu.proj.interceptor.AuthorityInterceptor">
+			</interceptor>
+			<interceptor-stack name="stack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="authority"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="stack"></default-interceptor-ref>
+
+		<global-results>
+            <result name="jsonPage">/WEB-INF/views/common/json.jsp</result>
+            <result name="timeoutPage">/WEB-INF/views/login.jsp</result>
+            <result name="frontTimeoutPage">/WEB-INF/views/front/login.jsp</result>
+            <result name="authCode" type="stream"/>
+            <result name="authorize" type="redirect">${authorizeUrl}</result>
+            <result name="loginResult">/loginResult.jsp</result>
+            <result name="index" type="redirect">/index.jsp</result>
+            <result name="SSOlogin" >/index.jsp</result>
+		</global-results>
+	</package>
+
+
+	<package name="frame-package" extends="struts-default">
+		
+	</package>
+	
+	<include file="config/struts/struts-frame.xml"></include>
+	<include file="config/struts/struts-sys.xml"></include>
+</struts>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="sys" namespace="/" extends="check-permission">
+
+        <action name="circleInfoAction_*" class="circleInfoAction" method="{1}">
+            <result name="success">/quanzi/{1}.jsp</result>
+            <result name="updatecircle">/quanzi/updatecircle1.jsp</result>
+            <result name="to">/quanzi/{1}_${stp}.jsp</result>
+            <result name="chuangjianquanzi">/quanzi/chuangjianquanzi1.jsp</result>
+        </action>
+
+		<action name="userInfoAction_*" class="userInfoAction" method="{1}">
+			<result name="success">/views/sys/user/{1}.jsp</result>
+			<result name="to">/views/sys/user/{1}_${stp}.jsp</result>
+			<result name="changuserinfo">/newuser/changeuserinfo.jsp</result>
+			<result name="updatedata">/newuser/submit.jsp</result>
+			<result name="updatehobby">/newuser/submit_interest.jsp</result>
+			<result name="updatehead">/newuser/submit_photo.jsp</result>
+		</action>
+
+        <action name="authorizeAction_*" class="authorizeAction" method="{1}">
+            <result name="success">/views/sys/user/{1}.jsp</result>
+            <result name="to">/views/sys/user/{1}_${stp}.jsp</result>
+        </action>
+
+		<action name="jsonInfoAction_*" class="jsonInfoAction" method="{1}">
+			<result name="success">/views/sys/user/{1}.jsp</result>
+			<result name="to">/views/sys/user/{1}_${stp}.jsp</result>
+		</action>
+		<action name="centerAction_*" class="userCenterAction" method="{1}">
+			<result name="uploadphoto">/setting/uploadphoto.jsp</result>
+			
+		</action>
+		<!--首页到二级页面专用访问  -->
+		<action name="circleDetail2_*" class="circleDetailInfoAction" method="showRightDetail">
+			<result name="show" type="dispatcher">/quanzi/circle.jsp</result>
+		</action>
+		<action name="circleDetail_*" class="circleDetailInfoAction" method="selectCircle">
+			<result name="circledetail" type="dispatcher">/quanzi/{1}.jsp</result>
+		</action>
+		<action name="circleDetails_*" class="circleDetailInfoAction" method="{1}">
+			<result name="circledetail" type="dispatcher">/quanzi/details.jsp</result>
+			<result name="circletag" type="dispatcher">/quanzi/circletag.jsp</result>
+			<result name="circletalk" type="dispatcher">/quanzi/circletalkmore.jsp</result>
+			<result name="talkdetail" type="dispatcher">/quanzi/circletalkdetail.jsp</result>
+		</action>
+		<action name="myVoteInfoAction_*" class="myVoteInfoAction" method="{1}">
+			<result name="success">/vote/{1}.jsp</result>
+		</action>
+		<action name="agreeAction_*" class="agreeAction" method="{1}"></action>
+		<action name="topicAction_*" class="topicAction" method="{1}"></action>
+		<action name="gztopicsAction_*" class="gztopicsAction" method="{1}"></action>
+		<action name="topicDetailAction_*" class="topicDetailAction" method="{1}"></action>
+		<action name="feiWenAction_*" class="feiWenAction" method="{1}">
+			<result name="update">/feiwen/updateFeiwen.jsp</result>
+			<result name="feiwen">/feiwen/feiWenDetail.jsp</result>
+<!--			<result name="otherfeiwen">/feiwen/feiWenDetailOther.jsp</result>-->
+		</action>
+		<action name="phoneFeiwenAction_*" class="phoneFeiwenAction" method="{1}"></action>
+		<action name="weixinAction_*" class="weixinAction" method="{1}">
+			<result name="detail">/app/feiwen/html/detail.jsp</result>
+		</action>
+	</package>
+</struts>

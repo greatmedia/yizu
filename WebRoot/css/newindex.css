@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document 
+
+* {margin: 0; padding: 0;}
+body{ font-family:"宋体"; font-size:12px; color:#626262; background:url(../images/bg.jpg) repeat; background:url(../images/bg.jpg) repeat;}
+ul{list-style-type:none;}
+a{color:#626262; text-decoration:none;}
+a:hover{color:#626262; text-decoration:none;}
+img{border:0;}
+.clear{clear:both;}*/
+
+.newindex_box{width:960px; height:auto; margin:0 auto; overflow:hidden; margin-top:20px; padding-bottom:20px;}
+
+.newindex_box1{width:960px; height:auto; margin:0 auto; overflow:hidden; margin-top:20px; margin-bottom:20px;}
+.newindex_box1_top{width:960px; height:33px; overflow:hidden;}
+.newindex_box1_top_left{float:left; width:424px; height:16px; border-bottom:solid 1px #bfbfbd; overflow:hidden;}
+.newindex_box1_top_middle{float:left; width:112px; height:33px; overflow:hidden; text-align:center;}
+.newindex_box1_top_middle p{font-size:16px; font-weight:bold; line-height:33px;}
+.newindex_box1_top_middle p a{color:#000;}
+.newindex_box1_top_middle p a:hover{color:#F0951F;}
+.newindex_box1_top_right{float:left; width:424px; height:16px; border-bottom:solid 1px #bfbfbd; overflow:hidden;}
+.newindex_middle1{width:960px; height:auto; margin:0 auto; overflow:hidden;}
+
+/*每个效果都要用到*/
+.ch-grid {padding: 0;list-style: none;display: block;width: 100%;}
+.ch-grid:after,.ch-item:before {content: '';display: table;}
+.ch-grid:after {clear: both;}
+.ch-grid li {width: 220px;height: 220px;display: inline-block;margin:5px;}
+/*每个效果都要用到*/
+
+.ch-img-1 { background-image: url(../images/shouye/pinpai.jpg);}
+.ch-img-2 { background-image: url(../images/shouye/lvyou.jpg);}
+.ch-img-3 { background-image: url(../images/shouye/yingxiao.jpg);}
+.ch-img-4 { background-image: url(../images/shouye/dianshang.jpg);}
+
+.ch-img-5 { background-image: url(../images/shouye/gaoerfu.jpg);}
+.ch-img-6 { background-image: url(../images/shouye/qiaopai.jpg);}
+.ch-img-7 { background-image: url(../images/shouye/zijia.jpg);}
+.ch-img-8 { background-image: url(../images/shouye/qixing.jpg);}
+
+.ch-img-9 { background-image: url(../images/shouye/yujia.jpg);}
+.ch-img-10 { background-image: url(../images/shouye/shouhui.jpg);}
+.ch-img-11 { background-image: url(../images/shouye/aisheying.jpg);}
+.ch-img-12 { background-image: url(../images/shouye/paoba.jpg);}
+
+.ch-img-13 { background-image: url(../images/shouye/aishuren.jpg);}
+.ch-img-14 { background-image: url(../images/shouye/huaju.jpg);}
+.ch-img-15 { background-image: url(../images/shouye/dianying.jpg);}
+.ch-img-16 { background-image: url(../images/shouye/liuxingyinyue.jpg);}
+
+.ch-img-17 { background-image: url(../images/shouye/zhichangxinren.jpg);}
+.ch-img-18 { background-image: url(../images/shouye/zhichangdaren.jpg);}
+.ch-img-19 { background-image: url(../images/shouye/shishangbangong.jpg);}
+.ch-img-20 { background-image: url(../images/shouye/qingchunlizhi.jpg);}
+
+.ch-img-21 { background-image: url(../images/shouye/lanyan.jpg);}
+.ch-img-22 { background-image: url(../images/shouye/chuanda.jpg);}
+.ch-img-23 { background-image: url(../images/shouye/lama.jpg);}
+.ch-img-24 { background-image: url(../images/shouye/qingshunv.jpg);}
+
+.ch-img-25 { background-image: url(../images/shouye/chihuo.jpg);}
+.ch-img-26 { background-image: url(../images/shouye/hongjiu.jpg);}
+.ch-img-27 { background-image: url(../images/shouye/diy.jpg);}
+.ch-img-28 { background-image: url(../images/shouye/kafeikong.jpg);}
+
+.ch-img-29 { background-image: url(../images/shouye/wanbiao.jpg);}
+.ch-img-30 { background-image: url(../images/shouye/baobao.jpg);}
+.ch-img-31 { background-image: url(../images/shouye/cosplay.jpg);}
+.ch-img-32 { background-image: url(../images/shouye/guanniaozu.jpg);}
+
+.ch-img-33 { background-image: url(../images/shouye/meijia.jpg);}
+.ch-img-34 { background-image: url(../images/shouye/sennv.jpg);}
+.ch-img-35 { background-image: url(../images/shouye/peise.jpg);}
+.ch-img-36 { background-image: url(../images/shouye/weidianying.jpg);}
+
+.ch-item {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+	box-shadow: inset 0 0 0 16px rgba(255,255,255,0.6), 0 1px 2px rgba(0,0,0,0.1);
+	cursor: default;
+	transition: all 0.4s ease-in-out;
+}
+
+
+.ch-info p a:hover {
+	color: #fff222;
+	color: rgba(255,242,34, 0.8);
+}
+
+.ch-item:hover {
+	box-shadow: 
+		inset 0 0 0 1px rgba(255,255,255,0.1),
+		0 1px 2px rgba(0,0,0,0.1);
+}
+.ch-item:hover .ch-info {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	opacity: 1;
+}
+
+.ch-item:hover .ch-info p {
+	opacity: 1;
+}
+
+
+
+.ch-info {
+	position: absolute;
+	background: rgba(63,147,147, 0.8);
+	width: inherit;
+	height: inherit;
+	border-radius: 50%;
+	opacity: 0;
+	
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	
+	-webkit-transform: scale(0);
+	-moz-transform: scale(0);
+	-o-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	
+	-webkit-backface-visibility: hidden;
+	text-align:center;
+
+}
+
+
+.ch-info h3 {color: #fff;text-transform: uppercase;letter-spacing: 2px;font-size: 14px;margin: 0 auto;height:40px; margin-top:20px;font-family: 'Open Sans', Arial, sans-serif;text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0,0,0,0.3);}
+.ch-info h2{border-bottom: 1px solid rgba(255,255,255,0.5); margin:0 auto; padding-bottom:10px; width:180px;}
+.ch-info h2 a{margin:0 20px;}
+.ch-info p {color: #fff;	font-size: 12px;padding-top:20px;}
+.ch-info h1{margin:0 auto; margin-top:4px;width: 80px; height: 80px; overflow:hidden;-moz-border-radius: 40px; -webkit-border-radius: 40px; border-radius: 40px;}
+.ch-info h1 img{width: 80px;}
+.ch-info ul{width:100px; margin:0 auto; overflow:hidden;}
+
+

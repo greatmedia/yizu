@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0;}
+a{color:#626262; text-decoration:none;}
+a:hover{color:#ff0000; text-decoration:none;}
+img{border:0;}
+.clear{clear:both;}
+ul{list-style-type:none;}
+body{background-color:#fff; font:500 14px/1.8 Lucida,Verdana,Hiragino Sans GB,STHeiti,WenQuanYi Micro Hei,"Micro Yahei",微软雅黑,SimSun,sans-serif;}
+.box{width:960px; margin:0 auto; overflow:hidden; box-shadow:0 0 10px rgba(0,0,0,0.5);}
+.top_0{width:auto; border-bottom:#eaeaea 1px solid; background-color:#666666;}
+.top{width:960px; height:auto; margin:0 auto; overflow:hidden;}
+.top p{line-height:30px; margin-left:8px; color:#FFFFFF;}
+.top p a{margin:0 5px; color:#FFFFFF;}
+.top p a:hover{color:#FFFFFF;}
+.top p span{margin:0 5px;}
+.title{width:920px; margin:0 auto;overflow:hidden;}
+.title h1{font-family:"宋体"; font-size:28px; font-weight:bold; margin-top:25px; line-height:24px;}
+.time{width:920px;height:auto; margin:0 auto; margin-top: 10px;}
+.time p{color:#999;}
+
+.middle{width:920px; height:auto; margin:0 auto;  margin-top:10px;  position: relative;}
+.middle p{line-height:24px;  margin:0px 0px;}
+.middle p img{line-height:24px; text-align:center; margin:20px 0px;}
+.news{width:920px; height:auto; background-color:#f2f2f2; margin:0 auto; margin-top:30px; overflow:hidden; margin-bottom:30px;} 
+.news ul{ float:left; width:365px; overflow:hidden; margin:20px 40px; display:inline;}
+.news ul li{line-height:24px;}
+.news ul li span{font-size:18px; font-weight:bold; width:365px; border-bottom:#999999 dashed 1px; display:block; margin-bottom:10px; padding-bottom:5px;}
+.news ul li a{}
+.bottom{width:auto; border-bottom:#eaeaea 1px solid; background-color:#666666; text-align:center;}
+
+.bottom p{color:#FFFFFF; line-height:24px;}
+.link{height:29px; margin:0 auto; width:960px; position:relative; top:-200px; margin-left:0px;}
+.link ul{width:920px; height:29px; overflow:hidden; margin:0 auto;}
+.link ul li{ display:block;}
+.loginBtn{width:60px; display:block; height:29px;background:url(../images/feiwen05.jpg) no-repeat; border:none; border-width:0;cursor:pointer;}
+.loginBtn_hover{width:60px; height:29px;background:url(../images/feiwen03.jpg) no-repeat;  border:none; border-width:0; display:block;cursor:pointer;}
+.loginBtn_right{width:60px; display:block; height:29px;background:url(../images/feiwen06.jpg) no-repeat; border:none; border-width:0;cursor:pointer;}
+.loginBtn_right_hover{width:60px; height:29px;background:url(../images/feiwen04.jpg) no-repeat;  border:none; border-width:0; display:block;cursor:pointer;}
+.float_left{float:left;}
+.float_right{float:right;}
+
+#uyan_frame{
+	width:920px; padding-left:20px;
+}

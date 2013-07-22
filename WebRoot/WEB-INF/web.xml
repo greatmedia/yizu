@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- 配置加载Spring容器 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:config/spring/applicationContext.xml
+		</param-value>
+	</context-param>
+	
+	<filter>
+		<filter-name>Encoding</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Encoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+		<init-param>  
+            <param-name>logLevel</param-name>  
+           <param-value>WARN</param-value>  
+        </init-param>  
+	</filter>
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>SFilter</filter-name><!-- filter名称 -->
+		<filter-class>com.yizu.proj.sys.servlet.LoginFilter</filter-class><!-- filter的实现类 -->
+	</filter>
+	
+	<!-- 定义filter拦截的URL地址 -->
+	<filter-mapping>
+		<filter-name>SFilter</filter-name>
+		<url-pattern>/index.jsp</url-pattern>
+	</filter-mapping>
+<!--	<filter>  -->
+<!--        <filter-name>struts2CleanupFilter</filter-name>  -->
+<!--        <filter-class>org.apache.struts2.dispatcher.ActionContextCleanUp</filter-class>  -->
+<!--    </filter>  -->
+<!--    <filter-mapping>  -->
+<!--        <filter-name>struts2CleanupFilter</filter-name>  -->
+<!--        <url-pattern>*.do</url-pattern>                 -->
+<!--        <dispatcher>REQUEST</dispatcher>    -->
+<!--        <dispatcher>FORWARD</dispatcher>  -->
+<!--        <dispatcher>INCLUDE</dispatcher>  -->
+<!--    </filter-mapping>-->
+<!--	-->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		<init-param>
+	           <param-name>struts.i18n.encoding</param-name>
+	           <param-value>UTF-8</param-value>
+	  	</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.do</url-pattern><!--由/*修改成*.do-->
+		<dispatcher>REQUEST</dispatcher>    
+        <dispatcher>FORWARD</dispatcher>  
+       	<dispatcher>INCLUDE</dispatcher> 
+	</filter-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	
+	
+	<servlet>
+		<display-name>IndexServlet</display-name>
+		<servlet-name>IndexServlet</servlet-name>
+		<servlet-class>com.yizu.proj.sys.servlet.IndexServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UploadImageServlet</servlet-name>
+    <servlet-class>com.yizu.proj.sys.servlet.UploadImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Weixin</servlet-name>
+    <servlet-class>com.yizu.proj.sys.servlet.Weixin</servlet-class>
+  </servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>IndexServlet</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadImageServlet</servlet-name>
+    <url-pattern>/uploadImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Weixin</servlet-name>
+    <url-pattern>/weixin</url-pattern>
+  </servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/500.jsp</location>
+	</error-page >
+	
+	<listener>
+	     <listener-class>com.yizu.proj.sys.action.OnLineUserListener</listener-class>                       
+	</listener>
+	<session-config>
+			<session-timeout>60</session-timeout>
+		</session-config>
+</web-app>

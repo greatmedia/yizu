@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd  
+     http://www.springframework.org/schema/context  
+     http://www.springframework.org/schema/context/spring-context-3.0.xsd  
+     http://www.springframework.org/schema/tx  
+     http://www.springframework.org/schema/tx/spring-tx-3.0.xsd  
+     http://www.springframework.org/schema/aop
+     http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+     http://www.springframework.org/schema/jdbc  
+     http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd">
+
+
+	<bean id="userInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.UserInfoMapper" />
+	</bean>
+	<bean id="ciecleDetailImgMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.CiecleDetailImgMapper" />
+	</bean>
+	<bean id="circleCommentInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.CircleCommentInfoMapper" />
+	</bean>
+	<bean id="circleDetailInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.CircleDetailInfoMapper" />
+	</bean>
+	<bean id="circleInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.CircleInfoMapper" />
+	</bean>
+	<bean id="collectMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.CollectMapper" />
+	</bean>
+	<bean id="favoriteMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.FavoriteMapper" />
+	</bean>
+	<bean id="tagTopicMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.TagTopicMapper" />
+	</bean>
+	<bean id="userCircleRlsMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.UserCircleRlsMapper" />
+	</bean>
+	<bean id="tfindPwdLogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.TfindPwdLogMapper" />
+	</bean>
+
+
+
+
+	<bean id="myVoteInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.MyVoteInfoMapper" />
+	</bean>
+	<bean id="myVoteInfoImageMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.MyVoteInfoImageMapper" />
+	</bean>
+	<bean id="voteCommentInfoMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.VoteCommentInfoMapper" />
+	</bean>
+	<bean id="joinVoteMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.JoinVoteMapper" />
+	</bean>
+	<bean id="circleCommentInfoAgreeMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.CircleCommentInfoAgreeMapper" />
+	</bean>
+	<bean id="comtocomMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.ComtocomMapper" />
+	</bean>
+	<bean id="informMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.InformMapper" />
+	</bean>
+	<bean id="gztopicsMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.GztopicsMapper" />
+	</bean>
+	<bean id="userTopicMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.UserTopicMapper" />
+	</bean>
+	<bean id="topicPkMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.TopicPkMapper" />
+	</bean>
+	<bean id="userTopicPkMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.UserTopicPkMapper" />
+	</bean>
+
+	<bean id="userEmaillogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.UserEmaillogMapper" />
+	</bean>
+	<bean id="feiWenMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.FeiWenMapper" />
+	</bean>
+	<bean id="feiWenCommentMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.FeiWenCommentMapper" />
+	</bean>
+	<bean id="feiWenTypeMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.FeiWenTypeMapper" />
+	</bean>
+	<bean id="userloginlogMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface"
+			value="com.yizu.proj.sys.dao.UserloginlogMapper" />
+	</bean>
+	<!--访客  2013-3-4 -->
+	<bean id="visitorMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.VisitorMapper"/>
+	</bean>
+	<!--社区首页图片管理   3-6-->
+	<bean id="yizubannerMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.YizubannerMapper"/>
+	</bean>
+	<!--圈子标签 2013-3-25 -->
+	<bean id="circletagMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.CircletagMapper"/>
+	</bean>
+	<!--圈子标签关联  2013-3-25 -->
+	<bean id="circletagrelateMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.CircletagrelateMapper"/>
+	</bean>
+	<!--圈子即时聊天  2013-3-28 -->
+	<bean id="usertalkMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.UsertalkMapper"/>
+	</bean>
+	<!--圈子首页热议  2013-4-1 -->
+	<bean id="circletalkaboutMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.CircletalkaboutMapper"/>
+	</bean>
+	<!--圈子首页6个推荐圈子  2013-4-23 -->
+	<bean id="circlerecommendMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.CirclerecommendMapper"/>
+	</bean>
+	<!--省份 三级联动  2013-5-23 -->
+	<bean id="provinceMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.ProvinceMapper"/>
+	</bean>
+	<!--城市 三级联动  2013-5-23 -->
+	<bean id="cityMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.CityMapper"/>
+	</bean>
+	<!--城镇 三级联动  2013-5-23 -->
+	<bean id="townMapper"
+		class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" 
+			value="com.yizu.proj.sys.dao.TownMapper"/>
+	</bean>
+	
+	
+	
+	
+	<bean id="userInfoService" parent="baseTransactionProxy">
+		<property name="target" ref="userInfoServiceImpl"></property>
+	</bean>
+	<bean id="ciecleDetailImgService" parent="baseTransactionProxy">
+		<property name="target" ref="ciecleDetailImgServiceImpl" />
+	</bean>
+	<bean id="circleCommentInfoService" parent="baseTransactionProxy">
+		<property name="target" ref="circleCommentInfoServiceImpl" />
+	</bean>
+	<bean id="circleDetailInfoService" parent="baseTransactionProxy">
+		<property name="target" ref="circleDetailInfoServiceImpl" />
+	</bean>
+	<bean id="circleInfoService" parent="baseTransactionProxy">
+		<property name="target" ref="circleInfoServiceImpl" />
+	</bean>
+	<bean id="collectService" parent="baseTransactionProxy">
+		<property name="target" ref="collectServiceImpl" />
+	</bean>
+	<bean id="favoriteService" parent="baseTransactionProxy">
+		<property name="target" ref="favoriteServiceImpl" />
+	</bean>
+	<bean id="tagTopicService" parent="baseTransactionProxy">
+		<property name="target" ref="tagTopicServiceImpl" />
+	</bean>
+	<bean id="userCircleRlsService" parent="baseTransactionProxy">
+		<property name="target" ref="userCircleRlsServiceImpl" />
+	</bean>
+	<bean id="tfindPwdLogService" parent="baseTransactionProxy">
+		<property name="target" ref="tfindPwdLogServiceImpl" />
+	</bean>
+
+
+	<bean id="myVoteInfoService" parent="baseTransactionProxy">
+		<property name="target" ref="myVoteInfoServiceImpl"></property>
+	</bean>
+	<bean id="myVoteInfoImageService" parent="baseTransactionProxy">
+		<property name="target" ref="myVoteInfoImageServiceImpl"></property>
+	</bean>
+	<bean id="voteCommentInfoService" parent="baseTransactionProxy">
+		<property name="target" ref="voteCommentInfoServiceImpl"></property>
+	</bean>
+	<bean id="joinVoteService" parent="baseTransactionProxy">
+		<property name="target" ref="joinVoteServiceImpl"></property>
+	</bean>
+	<bean id="circleCommentInfoAgreeService" parent="baseTransactionProxy">
+		<property name="target" ref="circleCommentInfoAgreeServiceImpl" />
+	</bean>
+	<bean id="comtocomService" parent="baseTransactionProxy">
+		<property name="target" ref="comtocomServiceImpl" />
+	</bean>
+	<bean id="gztopicsService" parent="baseTransactionProxy">
+		<property name="target" ref="gztopicsServiceImpl" />
+	</bean>
+	<bean id="informService" parent="baseTransactionProxy">
+		<property name="target" ref="informServiceImpl" />
+	</bean>
+	<bean id="userTopicService" parent="baseTransactionProxy">
+		<property name="target" ref="userTopicServiceImpl" />
+	</bean>
+	<bean id="topicPkService" parent="baseTransactionProxy">
+		<property name="target" ref="topicPkServiceImpl" />
+	</bean>
+	<bean id="userTopicPkService" parent="baseTransactionProxy">
+		<property name="target" ref="userTopicPkServiceImpl" />
+	</bean>
+	<bean id="userEmaillogService" parent="baseTransactionProxy">
+		<property name="target" ref="userEmaillogServiceImpl" />
+	</bean>
+	<bean id="feiWenService" parent="baseTransactionProxy">
+		<property name="target" ref="feiWenServiceImpl" />
+	</bean>
+	<bean id="feiWenCommentService" parent="baseTransactionProxy">
+		<property name="target" ref="feiWenCommentServiceImpl" />
+	</bean>
+	<bean id="feiWenTypeService" parent="baseTransactionProxy">
+		<property name="target" ref="feiWenTypeServiceImpl" />
+	</bean>
+	<bean id="userloginlogService" parent="baseTransactionProxy">
+		<property name="target" ref="userloginlogServiceImpl" />
+	</bean>
+	<bean id="visitorService" parent="baseTransactionProxy">
+		<property name="target" ref="visitorServiceImpl"/>
+	</bean>
+	<bean id="yizubannerService" parent="baseTransactionProxy">
+		<property name="target" ref="yizubannerServiceImpl"/>
+	</bean>
+	<bean id="circletagService" parent="baseTransactionProxy">
+		<property name="target" ref="circletagServiceImpl"/>
+	</bean>
+	<bean id="circletagrelateService" parent="baseTransactionProxy">
+		<property name="target" ref="circletagrelateServiceImpl"/>
+	</bean>
+	<bean id="usertalkService" parent="baseTransactionProxy">
+		<property name="target" ref="usertalkServiceImpl"/>
+	</bean>
+	<bean id="circletalkaboutService" parent="baseTransactionProxy">
+		<property name="target" ref="circletalkaboutServiceImpl"/>
+	</bean>
+	<bean id="circlerecommendService" parent="baseTransactionProxy">
+		<property name="target" ref="circlerecommendServiceImpl"/>
+	</bean>
+	<bean id="provinceService" parent="baseTransactionProxy">
+		<property name="target" ref="provinceServiceImpl"/>
+	</bean>
+	<bean id="cityService" parent="baseTransactionProxy">
+		<property name="target" ref="cityServiceImpl"/>
+	</bean>
+	<bean id="townService" parent="baseTransactionProxy">
+		<property name="target" ref="townServiceImpl"/>
+	</bean>
+</beans>
